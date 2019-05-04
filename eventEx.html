@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    function loadFunc()
+    {
+        alert("JavaScript Events Page Loaded");
+        
+    }
+ function focusFunc(x)
+ {
+    x.style.background="lightblue";
+ }
+ function blurFunc()
+ {
+    var x = document.getElementById("f1");
+  x.value = x.value.toUpperCase();
+  x.style.background="white";
+ }
+ function onClickFunc()
+ {
+     var name=document.getElementById("f1").value;
+     alert("Hi    "+name);
+     document.getElementById("f2").innerHTML=name;
+ }
+</script>
+<body onload="loadFunc()">
+    <h1>This page shows an example of 
+        
+        events
+    </h1>
+name:<input type="text" id="f1" name="nam" onfocus="focusFunc(this)" onblur="blurFunc()">
+<button onclick="onClickFunc()">ClickMe</button><br>
+<p id="f2" onmouseover="style.color='red'" onmouseout="style.color='black'"></p>
+
+
+</body>
+</html>
